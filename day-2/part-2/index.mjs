@@ -35,7 +35,6 @@ let input = buffer.toString();
 let rounds = input.split("\n");
 
 let total = rounds.reduce((total, round) => {
-  if (!round) return total;
   let [them, us] = round.split(" ");
   return total + play(them, us);
 }, 0);
